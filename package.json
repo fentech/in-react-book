@@ -37,6 +37,7 @@
     "vite-plugin-dts": "^2.3.0",
     "vite-tsconfig-paths": "^4.2.0"
   },
+  "main": "dist/in-react-book.cjs",
   "exports": {
     ".": {
       "require": "./dist/in-react-book.cjs",
