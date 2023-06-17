@@ -8,7 +8,7 @@
     "build": "tsc && vite build && npm run build:css",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "build:css": "tailwindcss -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
+    "build:css": "tailwindcss -m -i ./src/index.css -o ./dist/styles.css",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
@@ -38,10 +38,12 @@
     "vite-tsconfig-paths": "^4.2.0"
   },
   "main": "dist/in-react-book.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/in-react-book.cjs",
-      "import": "./dist/in-react-book.es.js"
+      "import": "./dist/in-react-book.es.js",
+      "types": "./dist/index.d.ts"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
